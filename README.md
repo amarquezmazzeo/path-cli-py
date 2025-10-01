@@ -1,7 +1,7 @@
 # path-cli-py
 CLI tool for getting the estimated time of arrival for a given station within the NJ PATH system.
 
-<img width="674" height="604" alt="image" src="https://github.com/user-attachments/assets/8219a496-424a-496c-ab54-c8199f2f430a" />
+![demo](https://github.com/amarquezmazzeo/path-cli-py/blob/main/demo.gif?raw=true)
 
 # Getting Started
 
