@@ -72,7 +72,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-.ipynb
+sketchbook.ipynb
 
 # IPython
 profile_default/
