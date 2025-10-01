@@ -42,6 +42,9 @@ Python 3.12+
 ## Usage
 
 Usage:
-  ```help```: Displays help details
-  ```map```: Displays the NJ PATH map
-  ```eta```: Get departures ETA from a given origin
+
+```help```: Displays help details
+
+```map```: Displays the NJ PATH map
+
+```eta```: Get departures ETA from a given origin
