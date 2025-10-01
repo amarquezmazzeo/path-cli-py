@@ -5,15 +5,15 @@ from commands.commands import COMMANDS
 
 def main():
     args = sys.argv[1:]
-    print("User arguments:", args)
-
+    # print("User arguments:", args)
 
     if len(args) != 1:
+        print("Invalid number of arguments")
         COMMANDS['help']['callback']()
         return 
 
     if args[0] not in COMMANDS:
-        print("Invalid command")
+        print(f"Invalid command '{args[0]}'")
         COMMANDS['help']['callback']()
         return
     
