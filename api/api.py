@@ -15,6 +15,20 @@ def get_departure_eta(station):
         return
     
     resultPaths = data[station]
-    # Return the raw result paths for the requested station.
-    # Tests can mock get_path_data() and assert this return value.
-    return resultPaths
+    
+    resultObj = {
+        'ToNJ': [],
+        'ToNY': []
+    }
+    
+    for destination in resultPaths['destinations']:
+        for message in destination['messages']:
+            target = f"{message['headSign']} ({message['target']})"
+            etaSec = int(message['secondsToArrival'])
+            resultObj[destination['label']].append(
+                {'target': target,
+                 'eta': etaSec}
+            )
+        
+    
+    return resultObj

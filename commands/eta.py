@@ -17,8 +17,9 @@ stations = {
     12: {"shortName": "33S", "longName": "33 St"},
 }
 
-
 def eta_command():
+    
+    # Get input station
     station = -1
     while station not in stations:
         try:
@@ -27,7 +28,7 @@ def eta_command():
                     "Select origin station\n"
                     + "\n".join(
                         [
-                            f"  {x}.\t{stations[x]['longName']}({stations[x]['shortName']})"
+                            f"  {x}.\t{stations[x]['longName']} ({stations[x]['shortName']})"
                             for x in stations
                         ]
                     )
@@ -39,4 +40,21 @@ def eta_command():
             continue
         if station not in stations:
             print("\nInvalid station...\n")
-    pprint.pp(get_departure_eta(station))
+    
+    # Print to console
+    
+    long_name = stations[station]['longName']
+    print("\n╔══════"+"═"*len(long_name)+"═══════════════╗")
+    print(f"╠═════ {long_name} selected ═════╣")
+    print("╚══════"+"═"*len(long_name)+"═══════════════╝\n")
+    
+    departures = get_departure_eta(station)
+    for destination in departures:
+        print(f"{destination[:2]} {destination[2:]}:")
+        for train in departures[destination]:
+            etaMin = train['eta'] // 60
+            etaSec = train['eta'] % 60
+            print(f" - {train['target']} - {etaMin}m {etaSec}s")
+    print()
+    
+    # pprint.pp(get_departure_eta(station))
