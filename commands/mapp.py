@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-from colorama import Fore, Style, init
+from colorama import Fore, Style
 
 PATH_MAP = """
                     NJ              HUDSON RIVER       NY

@@ -106,3 +106,8 @@ cython_debug/
 
 # VS Code
 .vscode/
+
+# Virtual envs
+env/
+venv/
+.venv/

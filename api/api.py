@@ -1,5 +1,4 @@
 import requests
-import math
 import time
 
 def get_path_data():

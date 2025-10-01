@@ -1,5 +1,3 @@
-
-
 def help_command():
     from .commands import COMMANDS
     print("\nNJ PATH CLI Tool (NON-OFFICIAL)")
