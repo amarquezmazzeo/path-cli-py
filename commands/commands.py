@@ -1,5 +1,6 @@
 from .mapp import map_command
 from .help import help_command
+from .eta import eta_command
 
 COMMANDS = {
     'help': {
@@ -11,5 +12,10 @@ COMMANDS = {
         'name': 'map',
         'description': "Displays the NJ PATH map",
         'callback': map_command,  
+    },
+    'eta': {
+        'name': 'eta',
+        'description': "Get departures ETA from a given origin",
+        'callback': eta_command,  
     }
 }

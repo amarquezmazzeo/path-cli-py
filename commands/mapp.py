@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from colorama import Fore, Style, init
 
-init(autoreset=True)
-
 PATH_MAP = """
                     NJ              HUDSON RIVER       NY
 
@@ -33,11 +31,11 @@ PATH_MAP = """
    Newark ●══╝                         ≈≈≈≈≈
 
 
-LEGEND:
-──--│  Hoboken-WTC / JSQ-33rd St 
-══==║  Hoboken-33rd St / Newark-WTC
-≈≈≈≈≈  Hudson River
-"""
+  LEGEND:
+  ──--│  Hoboken-WTC / JSQ-33rd St 
+  ══==║  Hoboken-33rd St / Newark-WTC
+  ≈≈≈≈≈  Hudson River
+  """
 
 def colorize_map(text):
     # Hudson River - cyan
