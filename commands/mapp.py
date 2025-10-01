@@ -1,44 +1,35 @@
 from colorama import Fore, Style
 
 PATH_MAP = """
-                    NJ              HUDSON RIVER       NY
 
-                                       ≈≈≈≈≈
-                                       ≈≈≈≈≈         ◖◗ 33 St
-                                       ≈≈≈≈≈         ║│
-                                       ≈≈≈≈≈         ◖◗ 23 St
-                                       ≈≈≈≈≈         ║│
-                                       ≈≈≈≈≈         ◖◗ 14 St
-                                       ≈≈≈≈≈         ║│
-                                       ≈≈≈≈≈         ◖◗  9 St
-                                       ≈≈≈≈≈         ║│
-                      Hoboken          ≈≈≈≈≈         ║│
-                            ●══════════=====════════█╝│ 
-                            │  ╭───────-----────────█─╯ 
-                            │  │       ≈≈≈≈≈       Christopher St
-                   ╭────────█──╯       ≈≈≈≈≈        
-                   │        │ Newport  ≈≈≈≈≈        
-                   │        │          ≈≈≈≈≈
-                   │        │          ≈≈≈≈≈
-                   │        │          ≈≈≈≈≈
-             █────█╯        ╰█─────────-----────█ World Trade
-  Journal Sq █════█══════════█═════════=====════█ Center
-             ║   Grove St   Exchange   ≈≈≈≈≈      
-    Harrison ●              Pl         ≈≈≈≈≈
-             ║                         ≈≈≈≈≈
-             ║                         ≈≈≈≈≈
-   Newark ●══╝                         ≈≈≈≈≈
+                    NJ             HUDSON RIVER     NY
+                                       
+                                      ≈≈≈≈≈       ◖◗ 33 St
+ LEGEND:                              ≈≈≈≈≈       ║│
+ ──--│ Hoboken–WTC / JSQ–33rd St      ≈≈≈≈≈       ◖◗ 23 St
+ ══==║ Hoboken–33rd St / Newark–WTC   ≈≈≈≈≈       ║│
+                                      ≈≈≈≈≈       ◖◗ 14 St
+                                      ≈≈≈≈≈       ║│
+                                      ≈≈≈≈≈       ◖◗  9 St
+                      Hoboken         ≈≈≈≈≈       ║│
+                            ●═════════=====══════█╝│ 
+                            │  ╭──────-----──────█─╯ 
+                            │  │      ≈≈≈≈≈   Christopher St
+                   ╭────────█──╯      ≈≈≈≈≈        
+                   │        │ Newport ≈≈≈≈≈        
+                   │        │         ≈≈≈≈≈
+             █────█╯        ╰█────────-----────█ World Trade
+  Journal Sq █════█══════════█════════=====════█ Center
+             ║   Grove St   Exchange  ≈≈≈≈≈      
+    Harrison ●              Pl        ≈≈≈≈≈≈
+             ║                        ≈≈≈≈≈≈≈≈
+   Newark ●══╝                        ≈≈≈≈≈≈≈≈≈
 
-
-  LEGEND:
-  ──--│  Hoboken-WTC / JSQ-33rd St 
-  ══==║  Hoboken-33rd St / Newark-WTC
-  ≈≈≈≈≈  Hudson River
   """
 
 def colorize_map(text):
     # Hudson River - cyan
-    text = text.replace('≈≈≈≈≈', f'{Fore.CYAN}≈≈≈≈≈{Style.RESET_ALL}')
+    text = text.replace('≈', f'{Fore.CYAN}≈{Style.RESET_ALL}')
     text = text.replace('HUDSON RIVER', f'{Fore.CYAN}HUDSON RIVER{Style.RESET_ALL}')
     
     # Stations - yellow
